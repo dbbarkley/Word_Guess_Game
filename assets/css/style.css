@@ -1,0 +1,68 @@
+body {
+    background-image: url("../images/maybe2.png");
+}
+.logo { 
+    padding-bottom: 400px;
+    background-image: url("../images/StarTrekLogo.png");
+    width: 100%;
+    margin-top: -5%;
+    margin-left: -1%;
+
+}
+.container {
+    background-color: rgb(179, 177, 177);
+    padding: 150px 30px 100px 30px;
+    width: 60%;
+    float: left;
+    margin: auto;
+    margin-top: -5%;
+    margin-left: 18%;
+    margin-bottom: -50%;
+    border-radius: 2%;
+}
+#Guesses {
+    position: relative;
+    color: #f8cd3b;
+    text-shadow: 1px 1px black;
+    float: left;
+    margin-top: -50px;
+    font-family: 'Iceland', cursive;
+}
+.score {
+    margin-left: 90%;
+    margin-top: -70px;
+    color: #f8cd3b;
+    text-shadow: 1px 1px black;
+    font-family: 'Iceland', cursive;
+}
+#wins, #lose {
+    position: relative;
+    display: inline;
+    margin-right: -5px;
+    padding: 5px;
+    font-family: 'Iceland', cursive;
+}
+.word {
+    text-align: center;
+    font-size: 3em;
+    color: #f8cd3b;
+    text-shadow: 1px 1px black;
+    font-family: 'Iceland', cursive;
+}
+#hint {
+    text-align: center;
+    font-size: 2em;
+    color: #f8cd3b;
+    text-shadow: 1px 1px black;
+    font-family: 'Iceland', cursive;
+}
+#guessedletters {
+    float: left;
+    margin-left: 60%;
+    color: #f8cd3b;
+    text-shadow: 1px 1px black;
+    font-family: 'Iceland', cursive;
+}
+document.addEventListener("keypress", userGuess);
+function userGuess() { 
+        var keyword = String.fromCharCode(userGuess.keycode);
