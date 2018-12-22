@@ -12,23 +12,23 @@
 <body>
     <div class="wrapper">
         <div class="logo"></div>
-
-        <div class="container">
-            
-                <p id="Guesses">Guesses:
-                    <span></span>
+             <div class="container">
+                <p id="instructions">USE YOUR KEYBOARD TO TRY TO GUESS THE STAR TREK THEME WORD.
+                                    HINT: CHARACTER NAMES, SPEICES, AND WEAPONS.</p>
+                    <hr>
+                <p id="guess">Guesses: 
+                    <span id="Guesses"></span>
                 </p>
-                <div class="score">
-                    <p>Score
-                        <p id="wins">W: <span>0 </span></p><p id="lose">L:  <span>0 </span></p>
-                    </p>
-                </div>
-            
-            <p id="hint">Hint:
-                    <span></span>
-            </p>
-            <p class="word"></p>
-            <div id="guessedletters"></div>
+                    <div class="score">
+                        <p>Score
+                            <p>W: <span id="wins"> </span></p><p>L:  <span id="lose"> </span></p>
+                        </p>
+                    </div>
+                <p id="word"></p>
+            <div id="block">
+              <p>Letters Guessed:</p>
+              <p id="wrongletters"></p>
+            </div>
         </div>
     </div> 
     <Script src="assets/javascript/game.js"></Script>
