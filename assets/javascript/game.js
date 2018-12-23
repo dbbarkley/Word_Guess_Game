@@ -6,15 +6,16 @@ var underScore = [];
 var newScore = [];
 var randomNumber = [Math.floor(Math.random() * possibleWords.length)];
 var randomWord = possibleWords[randomNumber];
-var wins;
-var loses;
+var wins = 0;
+var loses = 0;
 var lives = 10
 //==============================================================================
 //DOM munipulation
 var generateUnderScore = document.getElementById("word");
 var generateWrongLetter = document.getElementById("wrongletters");
 var winGame = document.getElementById("wins");
-var showLives = document.getElementById("lives");
+var showLives = document.getElementById("livesLost");
+var loseGame = document.getElementById("lose");
 //==============================================================================
 //testing
 console.log(randomWord);
@@ -38,29 +39,27 @@ document.addEventListener("keypress", (event) => {
         underScore[randomWord.indexOf(keyword)] = keyword.toUpperCase();
         generateUnderScore.innerHTML = underScore.join(" ");
             if(randomWord.length == rightLetter.length) {
-                for(var k = 0; k < wins.length; k++); {
-                    winGame.innerHTML = winGame[k];
-                }
-                alert("you win! You guessed " + randomWord + ".");
-                console.log(winGame);
-                
-            
+                winGame.innerHTML = wins += 1;
+                alert("You win! You guessed " + randomWord + ".");
+                console.log(winGame);     
             }
            }else(wrongLetter.push(keyword.toUpperCase())); {
             document.getElementById("wrongletters").innerHTML = wrongLetter; 
+            showLives.innerHTML = lives -= 1;
+                if(lives == 0) {
+                    loseGame.innerHTML = loses +=1;
+                    alert("Better luck next time! The correct word is " + randomWord + ".");
+                }
 
         }
-        console.log(rightLetter);
-        console.log(wrongLetter);
     });
+    newUnderScore();
+    event();
 
 
 //==============================================================================
     
-    var display = function () { //print outs for end game
-        showLives.innerHTML = "You have " + lives + " lives";
-    };
-    console.log(display());
+
 
     
     
