@@ -8,7 +8,7 @@ var randomNumber = [Math.floor(Math.random() * possibleWords.length)];
 var randomWord = possibleWords[randomNumber];
 var wins = 0;
 var loses = 0;
-var lives = 10
+var lives = 10;
 //==============================================================================
 //DOM munipulation
 var generateUnderScore = document.getElementById("word");
@@ -45,19 +45,28 @@ document.addEventListener("keypress", (event) => {
             }
            }else(wrongLetter.push(keyword.toUpperCase())); {
             document.getElementById("wrongletters").innerHTML = wrongLetter; 
-            showLives.innerHTML = lives -= 1;
+                showLives.innerHTML = lives -= 1;
                 if(lives == 0) {
                     loseGame.innerHTML = loses +=1;
                     alert("Better luck next time! The correct word is " + randomWord + ".");
-                }
 
+                }
+                
         }
+                console.log(rightLetter);
+                console.log(wrongLetter);
     });
-    newUnderScore();
-    event();
 
 
 //==============================================================================
+    /*refreshGame function:
+     resets the word
+     resets the 'lives'
+     empty's the 'Guessed letters'
+     in a way, 'refesh' the page, but keep the scores.
+
+     fix bug that counts 'rightLighter; as false and takes away a live.
+     check boolean.*/
     
 
 
